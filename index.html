@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<style>
+
+.bar{
+  border-bottom: 1px solid gray;
+}
+.Addbar{
+  margin-top: 70px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+.pbutton{
+  text-align: center;
+}
+
+.bottomp{
+  position:fixed;
+  bottom:0;
+  width:100%;
+  padding:20px;
+  text-align: center;
+  background-color: gray;
+}
+
+td{
+  height:50px;
+  vertical-align:middle;
+}
+
+#word{
+  font-size: 20px;
+}
+
+#name{
+  position:absolute;
+  left:80%;
+}
+#search{
+  position:absolute;
+  left:92%;
+}
+#add{
+  position:absolute;
+  left:96%;
+}
+</style>
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header data-bs-theme="dark">
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+              <strong>Album</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+    <form class="bar">
+      <div class="Addbar">
+        <span id="word">Word List</span>
+        <input type="text" class="rbar" id="name">
+        <button type="button1" class="rbar" id="search">search</button>
+        <button type="button2" class="rbar" id="add">add</button>
+      </div>
+    </form>
+    
+
+    <div class="table-responsive small">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th scope="col">번호</th>
+              <th scope="col">이름</th>
+              <th scope="col">생일</th>
+              <th scope="col">전화번호</th>
+              <th scope="col">주소</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>10</td>
+              <td>이성주</td>
+              <td>2001.10.15</td>
+              <td>010-6583-2961</td>
+              <td>포항</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>노영빈</td>
+              <td>2001.06.26</td>
+              <td>010-4163-8219</td>
+              <td>울산</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>이서린</td>
+              <td>rich</td>
+              <td>dashboard</td>
+              <td>tabular</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>신예하</td>
+              <td>placeholder</td>
+              <td>illustrative</td>
+              <td>data</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>text</td>
+              <td>random</td>
+              <td>layout</td>
+              <td>dashboard</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>dashboard</td>
+              <td>irrelevant</td>
+              <td>text</td>
+              <td>placeholder</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>dashboard</td>
+              <td>illustrative</td>
+              <td>rich</td>
+              <td>data</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>placeholder</td>
+              <td>tabular</td>
+              <td>information</td>
+              <td>irrelevant</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>random</td>
+              <td>data</td>
+              <td>placeholder</td>
+              <td>text</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>placeholder</td>
+              <td>irrelevant</td>
+              <td>visual</td>
+              <td>layout</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="pbutton">
+        <button type="button"><<</button>
+        <button type="button">1</button>
+        <button type="button">2</button>
+        <button type="button">3</button>
+        <button type="button">>></button>
+      </div>
+
+      <div class="bottomp">
+        <p>Page built for Project by Yeongbin Roh.</p>
+      </div> 
+</body>
+</html>

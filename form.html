@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <form>
+        <label for="fname">Full name:</label>
+        <input type="text" id="fname"> <br>
+
+        성적: <input type="radio" name="PF"> P <input type="radio" name="PF"> F <br>
+
+        <label for="transportation">가장 자주 이용하는 교통수단</label>
+        <select name="transportation">
+        <option value="taxi">택시</option>
+        <option value="car">자가용</option>
+        <option value="bus">버스</option>
+        <option value="subway">지하철</option>
+        </select>
+        <br>
+        
+        <label for="birthday">생일:</label>
+        <input type="date" name="birthday">
+
+       <fieldset>
+        <legend>Food:</legend>
+        <input type="checkbox" name="food1" value="한식">
+        <label for="food1"> 한식이 좋다</label><br>
+        <input type="checkbox" name="food2" value="양식">
+        <label for="food2"> 양식이 좋다</label><br>
+        <input type="checkbox" name="food3" value="중식">
+        <label for="food3"> 중식이 좋다</label><br>
+
+        <p><label for="foodreview">리뷰 달기:</label></p>
+        <textarea name="foodreview" rows="4" cols="50">음식이 맛있었다면 리뷰를 달아주세요.</textarea>
+        <br>
+       </fieldset>
+
+        비번: <input type="password" name="pwd"><br>
+
+        파일: <input type="file" name="file1"><br>
+
+        <input type='submit' value="제출">
+
+
+        <input type='reset' value="새로고침">
+    </form>
+</body>
+</html>
