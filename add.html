@@ -1,4 +1,50 @@
 <!DOCTYPE html>
+
+<style>
+  body{
+    background-color: darkgrey;
+  }
+
+  .top{
+    text-align: center;
+    margin-top: 100px;
+  }
+
+  .wrap{
+    height:400px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-size: 20px;
+    border:2px solid black;
+    padding:10px;
+  }
+
+  .one{
+    margin-bottom: 30px;
+  }
+
+  .box{
+    width:200px;
+    height:20px;
+  }
+
+  .finish{
+    text-align: center;
+    margin-top:20px;
+  }
+
+  .top{
+    margin-bottom: 100px;
+  }
+
+
+
+</style>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,24 +52,85 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        <label for="fname">Full name:</label>
-        <input type="text" id="fname"> <br>
+    <form name="forml">
+      <div class="top">
+          <h1>친구 인적 사항 입력</h1>
+      </div>
 
-        <label for="birthday">생일:</label>
-        <input type="date" name="birthday"><br>
-
-        <label for="fname">전화번호:</label>
-        <input type="text" id="fname"> <br>
-
-        <label for="fname">주소:</label>
-        <input type="text" id="fname"> <br>
-
-        성별: <input type="radio" name="PF"> 남자 <input type="radio" name="PF"> 여자 <br>
-
-        <label for="fname">학과:</label>
-        <input type="text" id="fname"> <br>
-        
+      <div class="wrap">
+        <div>
+          <div class="one">
+            <label for="fname">이름:</label>
+            <input type="text" id="fname" class="box" placeholder="Name"> <br>  
+          </div>
+          
+          <div class="one">
+            <label for="birthday">생일:</label>
+            <input type="date" name="birthday"><br>   
+          </div>
+          
+          <div class="one">
+            <label for="phone">전화번호:</label>
+            <input type="text" id="phone" class="box" placeholder="010-xxxx-xxxx"> <br>   
+          </div>
+          
+          <div class="one">
+            <label for="address">주소:</label>
+            <input type="text" class="box" id="address"> <br>   
+          </div>
+          
+          <div class="one">
+            성별: <input type="radio" name="MF"> 남자 <input type="radio" name="MF"> 여자 <br>  
+          </div>
+          
+          <div class="one">
+            <label for="major">학과:</label>
+            <input type="text" class="box" id="major"> <br> 
+          </div>
+          
+          <div class="finish">
+            <input type='submit' onclick="return validateForm()" action="form.php" method="post" value="추가">
+            <input type='reset' value="취소">
+          </div>
+        </div>
+      </div>
     </form>
 </body>
+
+<script>
+    function validateForm(){
+        var fname = document.forml.fname.value;
+        if(fname.value == ""){
+            alert("이름을 입력하세요");
+            fname.focus();
+            return false;
+        }
+
+        
+        if(fname.length < 2){
+            alert("이름은 2글자 이상 입력하세요");
+            fname.focus();
+            return false;
+        }
+
+        var birthday = document.forml.birthday;
+        if(birthday.value == ""){
+            alert("생일을 입력하세요");
+            return false;
+        }
+
+        var phone = document.forml.phone;
+        if(phone.value == ""){
+            alert("전화번호를 입력하세요");
+            phone.focus();
+            return false;
+        }
+
+        var address = document.forml.address;
+        if(address.value == ""){
+            alert("주소를 입력하세요");
+            return false;
+        }
+    }
+</script>
 </html>
