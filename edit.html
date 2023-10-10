@@ -12,15 +12,17 @@ body{
   }
 
   .wrap{
-    height:500px;
-    position:fixed;
+    height:600px;
+    width:400px;
+    position:absolute;
     top:50%;
     left:50%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
     font-size: 20px;
-    border:2px solid black;
+    margin-top:50px;
     padding:10px;
+    background-color: beige;
   }
 
   .one{
@@ -45,14 +47,9 @@ body{
     margin-bottom: 100px;
   }
 
-.bottomp{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  padding:20px;
-  text-align: center;
-  background-color: gray;
-}
+  #emails{
+    width:300px;
+  }
 </style>
 
 
@@ -64,6 +61,7 @@ body{
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="my.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -91,7 +89,7 @@ body{
         </div>
       </nav>
 
-      <form name="forml">
+      <form name="forml" onsubmit="return validateForm()" action="form.php" method="post">
         <div class="top">
             <h1>친구 인적 사항 수정</h1>
         </div>
@@ -100,22 +98,22 @@ body{
           <div class="in">
             <div class="one">
               <label for="fname">이름:</label>
-              <input type="text" id="fname" class="box" placeholder="Name"> <br>  
+              <input type="text" id="fname" class="box" placeholder="Name" value="노영빈"> <br>  
             </div>
             
             <div class="one">
               <label for="birthday">생일:</label>
-              <input type="date" name="birthday"><br>   
+              <input type="date" name="birthday" value="2001-06-26"><br>   
             </div>
             
             <div class="one">
               <label for="phone">전화번호:</label>
-              <input type="text" id="phone" class="box" placeholder="010-xxxx-xxxx"> <br>   
+              <input type="text" id="phone" class="box" placeholder="010-xxxx-xxxx" value="010-4163-8219"> <br>   
             </div>
             
             <div class="one">
-              <label for="address">주소:</label>
-              <input type="text" class="box" id="address"> <br>   
+              <label for="address">사는곳:</label>
+              <input type="text" class="box" id="address" value="울산"> <br>   
             </div>
             
             <div class="one">
@@ -124,18 +122,23 @@ body{
             
             <div class="one">
               <label for="major">학과:</label>
-              <input type="text" class="box" id="major"> <br> 
+              <input type="text" class="box" id="major" value="전산전자공학부"> <br> 
+            </div>
+
+            <div class="one">
+              <label for="email">이메일:</label>
+              <input type="email" class="box" id="emails" value="n00beanny@handong.ac.kr"> <br> 
             </div>
             
             <div class="finish">
-              <input type='submit' onclick="return validateForm()" action="form.php" method="post" value="수정">
+              <input type='submit' value="수정">
               <input type='reset' value="취소">
             </div>
           </div>
         </div>
       </form>
 
-      <div class="bottomp">
+      <div class="col-1">
         <p>Page built for Project by Yeongbin Roh.</p>
       </div> 
 </body>
@@ -147,15 +150,15 @@ body{
   }
 
   function validateForm(){
-        var fname = document.forml.fname.value;
+    var fname = document.forml.fname;
         if(fname.value == ""){
             alert("이름을 입력하세요");
             fname.focus();
             return false;
         }
 
-        
-        if(fname.length < 2){
+      
+        if(fname.value.length < 2){
             alert("이름은 2글자 이상 입력하세요");
             fname.focus();
             return false;

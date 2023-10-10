@@ -74,8 +74,10 @@ td{
     transform: translate(-50%, 0%);
     text-align: center;
     border:3px solid black;
+    border-radius: 20px;
     width:600px;
     height:500px;
+    background-color: yellowgreen;
 }
 
 .button{
@@ -94,6 +96,7 @@ td{
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="my.css">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -129,61 +132,40 @@ td{
         <div class="bbox">
           <div class="box">
 
+            <br><br>
+            <p>이름: 이성주</p><br>
+            <p>생일: 2001.10.15</p><br>
+            <p>전화번호: 010-6583-2961</p><br>
+            <p>사는곳: 포항</p><br>
+            <p>성별: 남</p><br>
+            <p>학과: 전산전자공학부</p><br>
+            <p>이메일: sjmon344@gmail.com</p>
+
           </div>  
         </div>
         
-        <form>
             <div class="button">
-               <button type="ebutton" id="edit">
-                <img src="./img/8664843_pen_to_square_icon.png" alt="" width="30" height="30" onclick="return editfunc()">
+               <button type="ebutton" onclick="location.href='./edit.html'" id="edit">
+                <img src="./img/8664843_pen_to_square_icon.png"  alt="" width="30" height="30">
                </button>
                <button type="dbutton" id="delete">
                 <img src="./img/8664938_trash_can_delete_remove_icon.png" alt="" width="30" height="30" onclick="return deletefunc()">
                </button>
             </div>   
-        </form>
          
         
       </div>
     
-      <div class="bottomp">
+      <div class="col-1">
         <p>Page built for Project by Yeongbin Roh.</p>
       </div> 
 </body>
 
 
 <script>
-  function editfunc(){
-    document.getElementById("edit").addEventListener("click", function() {
-            var targetUrl = "https://www.example.com";
-            window.location.href = targetUrl;
-        });
-  }
-
   function deletefunc(){
     confirm("게시물을 삭제할까요?");
     return true;
   }
 </script>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>버튼으로 링크 이동</title>
-</head>
-<body>
-    <button id="myButton">링크로 이동</button>
-
-    <script>
-        // 버튼 클릭 시 실행될 함수
-        document.getElementById("myButton").addEventListener("click", function() {
-            // 이동하려는 URL을 지정
-            var targetUrl = "https://www.example.com";
-            
-            // 현재 창에서 URL로 이동
-            window.location.href = targetUrl;
-        });
-    </script>
-</body>
 </html>

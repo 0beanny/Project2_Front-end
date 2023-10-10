@@ -1,0 +1,33 @@
+[class *='col-']{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    text-align: right;
+    background-color: aqua;
+}
+
+@media only screen and (min-width: 600px){
+    .col-1 {
+    background-color:yellow;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    text-align: left;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .col-1 {
+    background-color: red;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    padding:20px;
+    text-align: center;
+    }
+}
+
+
+
