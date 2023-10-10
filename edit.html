@@ -108,7 +108,7 @@ body{
             
             <div class="one">
               <label for="phone">전화번호:</label>
-              <input type="text" id="phone" class="box" placeholder="010-xxxx-xxxx" value="010-4163-8219"> <br>   
+              <input type="tel" id="phone" class="box" placeholder="010-xxxx-xxxx" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" required>   
             </div>
             
             <div class="one">
@@ -167,13 +167,6 @@ body{
         var birthday = document.forml.birthday;
         if(birthday.value == ""){
             alert("생일을 입력하세요");
-            return false;
-        }
-
-        var phone = document.forml.phone;
-        if(phone.value == ""){
-            alert("전화번호를 입력하세요");
-            phone.focus();
             return false;
         }
 
