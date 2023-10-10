@@ -1,8 +1,9 @@
 [class *='col-']{
-    position:fixed;
+    position:sticky;
     bottom:0;
-    width:100%;
+    margin-top:40px;
     padding:20px;
+    width:100%;
     text-align: right;
     background-color: aqua;
 }
@@ -10,10 +11,11 @@
 @media only screen and (min-width: 600px){
     .col-1 {
     background-color:yellow;
-    position:fixed;
+    position:sticky;
     bottom:0;
-    width:100%;
+    margin-top:40px;
     padding:20px;
+    width:100%;
     text-align: left;
     }
 }
@@ -21,10 +23,11 @@
 @media only screen and (min-width: 768px){
     .col-1 {
     background-color: red;
-    position:fixed;
+    position:sticky;
     bottom:0;
-    width:100%;
+    margin-top:40px;
     padding:20px;
+    width:100%;
     text-align: center;
     }
 }

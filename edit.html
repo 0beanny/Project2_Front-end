@@ -11,6 +11,12 @@ body{
     border-bottom: 4px solid gray;
   }
 
+  .wrapwrap{
+    position:relative;
+    height:655px;
+    width:100%;
+  }
+
   .wrap{
     height:600px;
     width:400px;
@@ -93,6 +99,7 @@ body{
         </div>
       </nav>
 
+    <div class="wrapwrap">
       <form name="forml" onsubmit="return validateForm()" action="form.php" method="post">
         <div class="top">
             <h1>친구 인적 사항 수정</h1>
@@ -125,7 +132,7 @@ body{
             </div>
             
             <div class="one">
-              성별: <input type="radio" name="MF"> 남자 <input type="radio" name="MF"> 여자 <br>  
+              성별: <input type="radio" name="MF" checked="true"> 남자 <input type="radio" name="MF"> 여자 <br>  
             </div>
             
             <div class="one">
@@ -145,6 +152,7 @@ body{
           </div>
         </div>
       </form>
+    </div>
 
       <div class="col-1">
         <p>Page built for Project by Yeongbin Roh.</p>

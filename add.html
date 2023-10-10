@@ -11,6 +11,12 @@ body{
     border-bottom: 4px solid gray;
   }
 
+  .wrapwrap{
+    position:relative;
+    height:655px;
+    width:100%;
+  }
+
   .wrap{
     height:600px;
     width:400px;
@@ -46,15 +52,6 @@ body{
   .top{
     margin-bottom: 100px;
   }
-
-.bottomp{
-  position:fixed;
-  bottom:0;
-  width:100%;
-  padding:20px;
-  text-align: center;
-  background-color: gray;
-}
 
 #emails{
     width:300px;
@@ -102,6 +99,7 @@ body{
     </div>
   </nav>
 
+  <div class="wrapwrap">
       <form name="forml" action="form.php" onsubmit="return validateForm()" method="post">
         <div class="top">
             <h1>친구 인적 사항 입력</h1>
@@ -154,6 +152,7 @@ body{
           </div>
         </div>
       </form>
+    </div>
 
       <div class="col-1">
         <p>Page built for Project by Yeongbin Roh.</p>
